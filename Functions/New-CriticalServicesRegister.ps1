@@ -1,4 +1,4 @@
-function Register-CriticalServices {
+function New-CriticalServicesRegister {
     <#
     .SYNOPSIS
     Collects the list of services from a remote machine and allows you to note register them as Critical
@@ -17,11 +17,11 @@ function Register-CriticalServices {
     Where the output file will be stored
         
     .EXAMPLE
-    Register-CriticalServices -Computer Server01 -OutputPath \\FILESERVER\RegisterLocation\
+    New-CriticalServicesRegister -Computer Server01 -OutputPath \\FILESERVER\RegisterLocation\
     Gets all services on Server01 and saves output to the remote file share
 
     .EXAMPLE
-    Register-CriticalServices -Computer Server01 -RunningOnly -OutputPath \\FILESERVER\RegisterLocation\
+    New-CriticalServicesRegister -Computer Server01 -RunningOnly -OutputPath \\FILESERVER\RegisterLocation\
     Gets all running services on Server01 and saves output to the remote file share
 
     #>

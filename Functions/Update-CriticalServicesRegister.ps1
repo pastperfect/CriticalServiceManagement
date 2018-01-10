@@ -1,10 +1,10 @@
-function Update-CriticalServices {
+function Update-CriticalServicesRegister {
     <#
     .SYNOPSIS
-    Updates the Critical Services register created by the Register-CriticalServices Function
+    Updates the Critical Services register created by the New-CriticalServicesRegister Function
     
     .DESCRIPTION
-    Updates the Critical Services register created by the Register-CriticalServices Function, this can be done against the current file or generated from a 
+    Updates the Critical Services register created by the New-CriticalServicesRegister Function, this can be done against the current file or generated from a 
     new scan of the target computer
     
     .PARAMETER Computer
@@ -20,11 +20,11 @@ function Update-CriticalServices {
     If selected it will run a new scan for services against the machine
         
     .EXAMPLE
-    Update-CriticalServices -Computer Server01 -OutputPath \\FILESERVER\RegisterLocation\
+    Update-CriticalServicesRegister -Computer Server01 -OutputPath \\FILESERVER\RegisterLocation\
     Gets the Critical Services register for Server01 from \\FILESERVER\RegisterLocation\ and runs through the update process
 
     .EXAMPLE
-    Update-CriticalServices -Computer Server01 -OutputPath \\FILESERVER\RegisterLocation\ -Online
+    Update-CriticalServicesRegister -Computer Server01 -OutputPath \\FILESERVER\RegisterLocation\ -Online
     Gets the Critical Services register for Server01 from \\FILESERVER\RegisterLocation\ then runs a new scan for services on
     Server01, it will then run through the update process.
 
