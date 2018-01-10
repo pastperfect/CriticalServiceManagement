@@ -67,6 +67,9 @@ function Update-CriticalServices {
             throw "Output path not found"                        
         }
         $OutputFile = $OutputPath + $Computer + ".csv"
+        if (!(Test-Path $OutputFile)) {
+            throw "Output file not found, please run the Register-CriticalServices function against this machine."                        
+        }
     }
     process {
         if ($Online.IsPresent){
